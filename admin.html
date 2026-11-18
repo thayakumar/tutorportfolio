@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Tutor Portfolio CMS</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <button class="mobile-toggle" aria-label="Toggle sidebar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
+
+  <div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h1>Tutor CMS</h1>
+        <p>Manage your portfolio content</p>
+      </div>
+      <ul class="sidebar-nav"></ul>
+      <div class="sidebar-actions">
+        <button class="btn btn-primary" onclick="saveAll()" style="width:100%;justify-content:center">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+          Save Changes
+        </button>
+        <div style="display:flex;gap:6px">
+          <button class="btn btn-outline btn-sm" onclick="exportAll()" style="flex:1;justify-content:center">Export</button>
+          <button class="btn btn-outline btn-sm" onclick="importData()" style="flex:1;justify-content:center">Import</button>
+        </div>
+        <button class="btn btn-danger btn-sm" onclick="resetAll()" style="width:100%;justify-content:center">Reset to Defaults</button>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="main-content"></div>
+
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
